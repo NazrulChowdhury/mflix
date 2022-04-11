@@ -25,7 +25,7 @@ export default Bla
 
 export async function getServerSideProps({ params }) {
   try{
-    const response = await axios("http://localhost:3000/api/bla")
+    const response = await axios(`${API_HOST_URL}/api/bla`)
     const result = response.data
     return { 
       props: { 
