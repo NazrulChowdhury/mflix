@@ -25,7 +25,7 @@ export default Olaboga
 
 export async function getServerSideProps({ params }) {
   try{
-    const response = await axios(`${API_HOST_URL}/api/olaboga`)
+    const response = await axios(`${process.env.API_HOST_URL}/api/olaboga`)
     const result = response.data
     return { 
       props: { 
